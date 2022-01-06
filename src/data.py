@@ -121,8 +121,8 @@ def build_dataset(src,trg,src_tokenizer,trg_tokenizer,data_args,tfidf_vec,image_
             if w2 in w2ww:w2ww[w2].append(k)
             else:w2ww[w2]=[k]
 
-    # for s,t in tqdm(zip(src,trg),total=len(src)):
-    for s,t in zip(src,trg):
+    for s,t in tqdm(zip(src,trg),total=len(src)):
+    # for s,t in zip(src,trg):
         if image_lookup_table is not None:
             image = get_top_m_images(s,image_lookup_table,tfidf_vec,data_args.m)
             t = {

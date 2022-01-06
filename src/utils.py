@@ -2,10 +2,9 @@
 import os
 import math
 # from CONSTANT import REPORT_DATA_ARGS,REPORT_MODEL_ARGS,REPORT_TRAINING_ARGS
-from rich.console import Console
+
 from dataclasses import asdict
-from rich.panel import Panel
-from rich.columns import Columns
+
 import time
 import numpy as np
 import json
@@ -17,7 +16,7 @@ import nltk
 from sklearn.metrics import f1_score, balanced_accuracy_score
 from tqdm import tqdm
 from collections import OrderedDict
-from rich.progress import Progress
+
 # from CONSTANT import GENERATION_INPUTS_FOR_MODELS
 from torch.nn.parallel import DistributedDataParallel as DDP
 

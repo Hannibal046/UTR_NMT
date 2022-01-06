@@ -43,6 +43,7 @@ def main(data_args,model_args,training_args):
     
     set_seed(training_args.seed)
     os.makedirs('../.cache',exist_ok=True)
+    print("Loading Dataset...")
     if data_args.use_cache:
         train_dataset,dev_dataset,src_tokenizer,trg_tokenizer,tfidf_vec,image_lookup_table,keyword_net = pickle.load(open('../.cache/cache.pkl','rb'))
     else:
